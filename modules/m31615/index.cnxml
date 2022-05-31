@@ -1,0 +1,195 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Content MathML Tags</title>
+  <metadata>
+  <md:content-id>m31615</md:content-id><md:title>Content MathML Tags</md:title>
+  <md:abstract>A comprehensive explanation of the most commonly-used Content MathML tags. Provides an basic, step-by-step explanation as to how Content MathML expressions are built using these tags.</md:abstract>
+  <md:uuid>e6cc8ffb-c5cd-47ea-9898-9e554b7df3cb</md:uuid>
+</metadata>
+
+<content>
+    <para id="delete_me">Let's take a close look at <m:math>
+        <m:apply>
+          <m:eq/>
+          <m:apply>
+            <m:plus/>
+            <m:cn>2</m:cn>
+            <m:cn>2</m:cn>
+          </m:apply>
+          <m:cn>4</m:cn>
+        </m:apply>
+      </m:math> expressed in Content MathML. From it, we can identify the most common tags used in C-MML expressions.</para>
+    <example id="eip-563"><title>Writing <m:math>           <m:apply>             <m:eq/>             <m:apply>               <m:plus/>               <m:cn>2</m:cn>               <m:cn>2</m:cn>             </m:apply>             <m:cn>4</m:cn>           </m:apply>         </m:math> in Content MathML</title><code id="eip-258" display="block">&lt;m:math&gt;
+  &lt;m:apply&gt;
+  &lt;m:eq/&gt;
+    &lt;m:apply&gt;
+    &lt;m:plus/&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+    &lt;/m:apply&gt;
+  &lt;m:cn&gt;4&lt;/m:cn&gt;
+  &lt;/m:apply&gt;
+&lt;/m:math&gt;</code>
+    </example>
+    <para id="eip-959">There are a few things you should note immediately about the code above. Every tag (or <term>element</term>, as they are formally known) is contained in brackets and begins with a "m:" to signify that it is a MathML tag. We say that this "m:" defines the <term>namespace</term> of the element. Namespaces are used in web markup languages to keep track of which language (such as XHTML or QML) is being "spoken." Also notice that the equation begins with the <code>math</code> element, which denotes the beginning of every MathML expression.</para>
+    <para id="eip-721">Like other web-based markup languages, MathML tags have corresponding <term>end tags</term> which mark the end of a section-- in this case, the end of an operation or modifier.  Every end tag is essentially the same as it's start tag, but with a forward slash ("/") character in front of the name.</para>
+    <para id="eip-168">There are over a hundred different Content MathML tags, but only a few that are used in the majority of expressions. Remember, you can always refer to the <link url="http://www.w3.org/TR/MathML2/chapter4.html">W3C's Content MathML page</link> to look up a tag if you can't remember it.</para>
+    <section id="eip-390"><title>Tokens: cn, ci, and csymbol</title>
+      <para id="eip-538">Each number, variable, and symbol has to be explicitly marked up in a given MathML expression. There are three different elements used to mark up these operands.<list id="tokenlist" display="block">
+          <item><code>cn</code></item>
+          <item><code>ci</code></item>
+          <item><code>csymbol</code></item>
+        </list>
+      </para><section id="eip-357"><title><code>cn</code></title><para id="eip-618">The <term>cn</term> element is used to denote an explicit number, as opposed to a variable or symbolic representation of a number. Values such as  <m:math display="display"><m:cn>1</m:cn></m:math>, <m:math display="display"><m:apply><m:minus/><m:cn>5000</m:cn></m:apply></m:math>, and <m:math display="display"><m:cn>3.14159</m:cn></m:math> are all marked up with <code>cn</code> tags.</para><para id="eip-526">In our simple example, <m:math>
+        <m:apply>
+          <m:eq/>
+          <m:apply>
+            <m:plus/>
+            <m:cn>2</m:cn>
+            <m:cn>2</m:cn>
+          </m:apply>
+          <m:cn>4</m:cn>
+        </m:apply>
+      </m:math>, there are three numbers marked up with <code>cn</code> tags.</para><code id="eip-773" display="block">&lt;m:math&gt;
+  &lt;m:apply&gt;
+  &lt;m:eq/&gt;
+    &lt;m:apply&gt;
+    &lt;m:plus/&gt;
+      <emphasis>&lt;m:cn&gt;2&lt;/m:cn&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;</emphasis>
+    &lt;/m:apply&gt;
+  <emphasis>&lt;m:cn&gt;4&lt;/m:cn&gt;</emphasis>
+  &lt;/m:apply&gt;
+&lt;/m:math&gt;</code></section><section id="eip-616"><title><code>ci</code></title><para id="eip-55">The <term>ci</term> element is used to markup variables. Any non-explicit representation of a number, such as <m:math display="display"><m:ci>X</m:ci></m:math>, <m:math display="display"><m:ci>F</m:ci></m:math>, or <m:math display="display"><m:ci><m:msub><m:mi>P</m:mi><m:mi>2</m:mi></m:msub></m:ci></m:math>, is contained in a <code>ci</code> element.</para><para id="eip-914">If we wished to change our example expression into an algebraic relation, say <m:math>
+        <m:apply>
+          <m:eq/>
+          <m:apply>
+            <m:plus/>
+            <m:ci>x</m:ci>
+            <m:cn>2</m:cn>
+          </m:apply>
+          <m:cn>4</m:cn>
+        </m:apply>
+      </m:math>, then we would only need to make one small change to the Content MathML markup.</para><code id="eip-373" display="block">&lt;m:math&gt;
+  &lt;m:apply&gt;
+  &lt;m:eq/&gt;
+    &lt;m:apply&gt;
+    &lt;m:plus/&gt;
+      <emphasis>&lt;m:ci&gt;x&lt;/m:ci&gt;</emphasis>
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+    &lt;/m:apply&gt;
+  &lt;m:cn&gt;4&lt;/m:cn&gt;
+  &lt;/m:apply&gt;
+&lt;/m:math&gt;</code></section><para id="eip-294">While the <term>csymbol</term> is a valid Content MathML construct, its use is fairly uncommon and therefor it will not be discussed in this module.</para>
+    </section>
+	<section id="eip-42"><title>Apply</title><para id="eip-581">Now that we understand how to markup operands, we need to know how to relate and operate upon them to form an expression. The most fundamental tag for writing Content MathML is the <term>apply</term> tag, which governs the way operations and modifiers are placed in the expression.  Take another look at the <link target-id="eip-258">example above</link>, and you might notice that there are two <code>apply</code> tags.  The <code>apply</code> tag is MathML's way of indicating that an operation or relation should be introduced.</para>
+      <para id="eip-146">The first child of an <code>apply</code> tag is the operation or relation we wish to implement. Colloquially, a <term>child</term> is any element directly within (or "under") an element.</para><code id="eip-145" display="block">&lt;m:math&gt;
+  &lt;m:apply&gt;
+  &lt;m:eq/&gt;
+    <emphasis effect="bold">&lt;m:apply&gt;</emphasis>
+    <emphasis effect="underline">&lt;m:plus/&gt;</emphasis>
+      <emphasis effect="italics">&lt;m:cn&gt;2&lt;/m:cn&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;</emphasis>
+    &lt;/m:apply&gt;
+  &lt;m:cn&gt;4&lt;/m:cn&gt;
+  &lt;/m:apply&gt;
+&lt;/m:math&gt;</code><para id="eip-699">In the code block above, the <code>apply</code> tag is highlighted in bold and the <code>apply</code> tag's first child element is italicized. The <code>apply</code> tag will always understand its first child to be the operation or relation. The operation in this case is <code>plus</code> (addition).</para><para id="eip-620">The second child of the <code>apply</code> tag is always the first element being acted upon. There may be even more children depending on what kind of operation is being applied. It wouldn't make any sense to apply sine to two numbers but it <emphasis>does</emphasis> make sense of apply addition to two numbers. For our example, there are two child elements after the <code>plus</code> tag, both of which are <code>cn</code> elements containing "2". So the instruction reads "apply addition to two and two," or <m:math>
+  <m:apply>
+    <m:plus/>
+    <m:cn>2</m:cn>
+    <m:cn>2</m:cn>
+  </m:apply>
+</m:math></para><para id="eip-335">It can be difficult to understand the way that <code>apply</code> tags work since MathML doesn't "read" like a typical mathematical expression. Again, remember that Content MathML is focused on applying operations in order to convey semantics. If we were to simply transcribe our Content MathML example onto paper as operations and numbers, it would look something like this:</para>
+<para id="polishexample">
+<m:math display="display">
+  <m:mrow>
+    <m:mo>=</m:mo>
+    <m:mo stretchy="false">(</m:mo>
+    <m:mo>+</m:mo>
+    <m:mn>2</m:mn>
+    <m:mtext> </m:mtext>
+    <m:mn>2</m:mn>
+    <m:mo stretchy="false">)</m:mo>
+    <m:mo stretchy="false">(</m:mo>
+    <m:mn>4</m:mn>
+    <m:mo stretchy="false">)</m:mo>
+  </m:mrow>
+</m:math>
+</para>
+<para id="eip-493">Equations written in this way are said to be in <term>prefix</term> notation (or <term>Polish notation</term>). It's may seem very counter-intuitive, but computers handle this notation a lot faster than "normal" (or <term>infix</term>) notation.</para>
+<para id="eip-257">To expand our understanding of the <code>apply</code> tag in Content MathML, let's look at the topmost <code>apply</code> tag and its children.</para><code id="eip-841" display="block">&lt;m:math&gt;
+  <emphasis effect="bold">&lt;m:apply&gt;</emphasis>
+  <emphasis effect="italics">&lt;m:eq/&gt;</emphasis>
+  <emphasis effect="underline">&lt;m:apply&gt;</emphasis>
+    &lt;m:plus/&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+    &lt;/m:apply&gt;
+  <emphasis effect="underline">&lt;m:cn&gt;4&lt;/m:cn&gt;</emphasis>
+  &lt;/m:apply&gt;
+&lt;/m:math&gt;</code><para id="eip-660">The first child of <code>apply</code> is the <code>eq</code> element, which corresponds to equality ("="). The second child, however, is another <code>apply</code> tag. This means that <emphasis>everything inside this second <code>apply</code> tag is the first argument</emphasis>. The third direct child of the first apply tag is a <code>cn</code> containing the number 4. This means that "whatever is in the second <code>apply</code> tag is equal to four."</para>
+    </section>
+	<section id="eip-750"><title>Relations and Operators</title>
+      <para id="eip-653">Mathematical expressions usually involve at least one <term>relation</term>, such as equality ("=") or one number being greater than the other ("&lt;" or "&gt;"). Content MathML offers an extensive library of relational elements. The <code>&lt;eq/&gt;</code> relation is highlighted in our example expression below.</para><code id="eip-60" display="block">&lt;m:math&gt;
+  &lt;m:apply&gt;
+  <emphasis>&lt;m:eq/&gt;</emphasis>
+    &lt;m:apply&gt;
+    &lt;m:plus/&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+    &lt;/m:apply&gt;
+  &lt;m:cn&gt;4&lt;/m:cn&gt;
+  &lt;/m:apply&gt;
+&lt;/m:math&gt;</code><para id="eip-556">Notice that the <code>&lt;eq/&gt;</code> element does not have an end tag. This is because relations and operations are generally declared using an <term>empty tag</term>. It doesn't "contain" anything, so it simply terminates itself with a forward slash at the end of the element.</para><para id="eip-437">There are several commonly-used Content MathML relation elements. These include:</para><list id="eip-934"><item><code>eq</code> (<m:math display="display">
+  <m:apply>
+    <m:eq/>
+    <m:cn>a</m:cn>
+    <m:cn>b</m:cn>
+  </m:apply>
+</m:math>)</item>
+<item><code>neq</code> (<m:math display="display">
+  <m:apply>
+    <m:neq/>
+    <m:cn>a</m:cn>
+    <m:cn>b</m:cn>
+  </m:apply>
+</m:math>)</item>
+<item><code>gt</code> (<m:math display="display">
+  <m:apply>
+    <m:gt/>
+    <m:cn>a</m:cn>
+    <m:cn>b</m:cn>
+  </m:apply>
+</m:math>)</item>
+<item><code>lt</code> (<m:math display="display">
+  <m:apply>
+    <m:lt/>
+    <m:cn>a</m:cn>
+    <m:cn>b</m:cn>
+  </m:apply>
+</m:math>)</item>
+<item><code>geq</code> (<m:math display="display">
+  <m:apply>
+    <m:geq/>
+    <m:cn>a</m:cn>
+    <m:cn>b</m:cn>
+  </m:apply>
+</m:math>)</item>
+<item><code>leq</code> (<m:math display="display">
+  <m:apply>
+    <m:leq/>
+    <m:cn>a</m:cn>
+    <m:cn>b</m:cn>
+  </m:apply>
+</m:math>)</item>
+</list><para id="eip-975">Similarly, we usually have at least one <term>operator</term> in a given mathematical expression. Some of the most common operators used in Content MathML include:</para><list id="eip-882"><item><code>plus</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:plus/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>minus</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:minus/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>divide</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:divide/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>times</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:times/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>power</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:power/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>root</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:root/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+</list>
+    </section>
+	
+	
+  </content>
+</document>

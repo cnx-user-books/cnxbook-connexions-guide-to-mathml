@@ -1,0 +1,63 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+
+<title>Presentation MathML Versus Content MathML</title>
+<metadata>
+  <md:content-id>m31620</md:content-id><md:title>Presentation MathML Versus Content MathML</md:title>
+  <md:abstract>A comparison of the two "syntaxes" of MathML: Presentation and Content. This module weighs the pros and cons of each syntax in a variety of teaching situations.</md:abstract>
+  <md:uuid>064e85de-6ba2-43ab-bbd0-fd7daf5a6c34</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me">There are two "flavors," or synataxes, of MathML: <term>Presentation MathML</term> and <term>Content MathML</term> (or P-MathML and C-MathML, respectively). Both are valid markup and follow the same basic set of rules.  P-MathML allows authors to have complete control over how an expression looks: Its size, color, which symbols are used, and the exact position of each object and element.  Expressions written in C-MathML, on the other hand, maintain their sense of meaning by using tags that denote operations and how they should be applied.  C-MathML preserves the <term>semantics</term> of an expression.</para><para id="eip-880">If this seems confusing, just remember that P-MML describes how an expression <emphasis>looks</emphasis>, while C-MML describes what an expression <emphasis>does</emphasis>.</para><para id="eip-749">There are drawbacks to using either P-MML or C-MML exclusively. Consider the following example which demonstrates how an expression might be read back by a screen reader (a tool used by the visually impaired to read on-screen text), depending on whether it was written using P-MathML or C-MathML.</para><table id="eip-63" summary="This table demonstrates the difference between semantics in Content and Presentation MathML. The first column displays a mathematical expression, and the next two columns demonstrate how that expression might be read back by a computer.">
+<tgroup cols="3"><thead>
+<row>
+<entry>Equation</entry>
+<entry>Content MathML</entry>
+<entry>Presentation MathML</entry>
+</row>
+</thead>
+<tbody>
+  <row>
+    <entry><m:math display="display">
+<m:apply>
+  <m:eq/>
+  <m:apply>
+    <m:int/>
+    <m:bvar>
+      <m:ci>x</m:ci>
+    </m:bvar>
+    <m:ci>A</m:ci>
+  </m:apply>
+    <m:apply>
+      <m:diff/>
+      <m:bvar>
+        <m:degree>
+          <m:cn>2</m:cn>
+        </m:degree>
+        <m:ci>x</m:ci>
+      </m:bvar>
+      <m:apply>
+        <m:times/>
+        <m:cn>3</m:cn>
+        <m:apply>
+          <m:power/>
+          <m:ci>B</m:ci>
+          <m:cn>4</m:cn>
+        </m:apply>
+      </m:apply>
+    </m:apply>
+</m:apply>
+</m:math></entry>
+    <entry>The integral of A with respect to X is equal to the second derivative of the quantity three times B to the fourth power with respect to X.</entry>
+    <entry>Integral sign, A, d, X, equals, d, squared, quantity, three, B, fourth power, end quantity, divided by, d, X, squared.</entry>
+  </row>
+</tbody>
+
+</tgroup><caption>The semantics of Content versus Presentation MathML</caption>
+</table><para id="eip-326">Obviously, C-MML would be much more useful in this case; P-MML cannot convey any useful information about the equation except for how to write it down.</para><para id="eip-742">There are also cases in which P-MML is the more appropriate syntax of MathML to use.  Consider a class of first-year calculus students learning about the derivative. Their instructor needs to write a math worksheet for the class in MathML. There are many ways to write the derivative of <m:math><m:ci>F</m:ci></m:math>...</para><list id="eip-608"><item> <m:math><m:mrow><m:msup><m:mi>F</m:mi><m:mo>'</m:mo></m:msup></m:mrow></m:math>
+</item>
+<item>F/dx</item>
+<item>F-dot</item></list><para id="eip-533">... but this class only knows prime notation at the moment.  If C-MML were used to build the worksheet, there is a chance that some students' browsers may display the derivative in the wrong form.  Using P-MML, the instructor can specify which derivative notation to use.</para><para id="eip-623">It is important to consider the audience when authoring MathML. If accessibility and content are not an issue, then P-MML offers a very easy-to-understand syntax for sharing mathematical equations. As a rule of thumb, Content-MathML should be used whenever possible, since it allows expressions to be viewed on a wide range of browsers, platforms, languages, and regions.</para>
+</content>
+
+</document>

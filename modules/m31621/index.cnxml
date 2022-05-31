@@ -1,0 +1,64 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+
+<title>Introduction</title>
+<metadata>
+  <md:content-id>m31621</md:content-id><md:title>Introduction</md:title>
+  <md:abstract>A brief summary of Content MathML, including an example and its use.</md:abstract>
+  <md:uuid>1dcfdee0-c375-47a0-acc3-5d3ba040b598</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me">Content MathML is a markup language used to describe mathematical expressions by correctly preseving their <term>semantics</term>.  Rather than focusing on the way an equation or expression looks (like Presentation MathML), Content MathML (or C-MML) aims to preserve the <emphasis>meaning</emphasis> of the expression so that it can be interpreted by anyone.  It does this by marking up each object with special tags that denote which operations to apply and in which order to apply them.  The mathematical expression can then be view by anyone with a MathML-enabled browser with the correct math fonts installed.</para><para id="eip-506">If you're familiar with XML or HTML, then you've already seen markup languages in action.  Markup languages are used for presenting documents such as web sites according to certain structural rules.  In the case of C-MML, the tags contain all the structural information about the expression.</para><para id="eip-40">Below is the classic equation <m:math>
+  <m:apply>
+    <m:eq/>
+    <m:apply>
+      <m:plus/>
+      <m:cn>2</m:cn>
+      <m:cn>2</m:cn>
+    </m:apply>
+    <m:cn>4</m:cn>
+  </m:apply>
+</m:math> represented in MathML.</para><code id="eip-988" display="block">&lt;m:math&gt;
+  &lt;m:apply&gt;
+    &lt;m:eq/&gt;
+    &lt;m:apply&gt;
+      &lt;m:plus/&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+      &lt;m:cn&gt;2&lt;/m:cn&gt;
+    &lt;/m:apply&gt;
+    &lt;m:cn&gt;4&lt;/m:cn&gt;
+  &lt;/m:apply&gt;
+&lt;/m:math&gt;<caption><m:math>
+  <m:apply>
+    <m:eq/>
+    <m:apply>
+      <m:plus/>
+      <m:cn>2</m:cn>
+      <m:cn>2</m:cn>
+    </m:apply>
+    <m:cn>4</m:cn>
+  </m:apply>
+</m:math> expressed in Content MathML</caption></code><para id="eip-333">Take a look at the above markup code: It may seem like a lot of information and tagging to represent something as easy-to-write as <m:math>
+  <m:apply>
+    <m:eq/>
+    <m:apply>
+      <m:plus/>
+      <m:cn>2</m:cn>
+      <m:cn>2</m:cn>
+    </m:apply>
+    <m:cn>4</m:cn>
+  </m:apply>
+</m:math>.  Remember, though, that C-MathML is interested in conveying the semantics of the expression, not just displaying symbols on the screen.  Math is also a very explicit language, so MathML expressions must be somewhat long in order to convey meaning.  Bigger and more complex equations benefit from the organization and explicit tagging of Content MathML, but for the sake of providing a simple example we will stick with <m:math>
+  <m:apply>
+    <m:eq/>
+    <m:apply>
+      <m:plus/>
+      <m:cn>2</m:cn>
+      <m:cn>2</m:cn>
+    </m:apply>
+    <m:cn>4</m:cn>
+  </m:apply>
+</m:math>.</para><para id="eip-6">MathML was designed to be built by special programs called <term>equation editors</term>, and not written by hand.  While equation editors are great tools to use while learning the language, they are not necessary to build an effective MathML expression.  In fact, many equation editors produce semantically <emphasis>incorrect</emphasis> MathML. It's important to always double-check any MathML markup created with an equation editor, especially to look for errors in the order of operations.</para>
+</content>
+
+</document>

@@ -1,0 +1,19 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+<title>A Few Words About MathML</title>
+<metadata>
+  <md:content-id>m31608</md:content-id><md:title>A Few Words About MathML</md:title>
+  <md:abstract>An introduction to MathML, and specifically an explanation as to its use in web education.</md:abstract>
+  <md:uuid>d8551bc0-eb66-4e6b-9b5e-ae566e69e94b</md:uuid>
+</metadata>
+
+<content>
+<para id="p1">
+Math is a complicated language: There are hundreds of symbols and signs used to create mathematical expressions. In fact, very few computer systems come equipped to display all of them. Many web sites, including <link url="http://cnx.org">Connexions</link>, are beginning to use a markup language called <term>MathML</term> to display math expressions and equations so that they may be viewed by any visitor.</para>
+
+<section id="eip-115"><title>Why MathML?</title><para id="eip-534">Before MathML was introduced, most web pages used images of math equations rather than markup.  There are several problems with this simple approach: Images can't be read by screen readers for disabled users and images do not scale well for presentation purposes, just to name a few. And while some Windows machines come with a limited number of fonts to display mathematical symbols, these may not correspond to the same symbols used on Unix and Mac OS systems.  Finally, typesetting math can be downright impossible over the Internet without the use of tables and style sheets to individually position each part of the expression.</para><para id="eip-875">MathML solves all of these problems by giving the user complete control over an expression's layout and content. Each element in an expression is tagged as a number, letter, operator, or symbol, then can be placed in tags that denote the sequence of operations applied.  Alternately, the expression can be built piece-by-piece, symbol-by-symbol, using tags to explicitly control the way the math will be presented.  When users view a web site with embedded MathML content, their web browser reads the tags and displays the content appropriately.</para></section>
+
+
+</content>
+
+</document>

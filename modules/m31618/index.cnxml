@@ -1,0 +1,194 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+
+<title>Content MathML Cookbook</title>
+<metadata>
+  <md:content-id>m31618</md:content-id><md:title>Content MathML Cookbook</md:title>
+  <md:abstract>A series of code examples explaining how to build basic algebra, calculus, trigonometry, and differential expressions using Content MathML</md:abstract>
+  <md:uuid>d5a2dfa8-5159-4564-a45b-ade401faf0ec</md:uuid>
+</metadata>
+
+<content>
+  <para id="delete_me">Content MathML, like any language, is difficult to "learn" completely. Becoming comfortable with the semantics and structure of Content MathML is a lot easier than memorizing every possible element </para>
+<para id="eip-500">This MathML "cookbook" provides you with the "ingredients" (or helpful examples) to begin writing your own MathML expressions. Namespaces are not included, so please be sure to include an appropriate namespace if combining these snippets with other XML languages.</para><section id="algebra"><title>Algebra</title><code id="eip-380" display="block"><title><m:math> <m:apply>   <m:eq/>   <m:apply>     <m:plus/>     <m:cn>2</m:cn>     <m:cn>2</m:cn>   </m:apply>   <m:cn>4</m:cn> </m:apply> </m:math></title>&lt;math&gt;
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;apply&gt;
+    &lt;plus/&gt;
+    &lt;cn&gt;2&lt;/cn&gt;
+    &lt;cn&gt;2&lt;/cn&gt;
+  &lt;/apply&gt;
+  &lt;cn&gt;4&lt;/cn&gt;
+&lt;/apply&gt;
+&lt;/math&gt;</code><code id="eip-718" display="block"><title><m:math> <m:apply>   <m:eq/>   <m:apply>     <m:plus/>     <m:apply>       <m:power/>       <m:ci>x</m:ci>       <m:cn>2</m:cn>     </m:apply>     <m:apply>       <m:times/>       <m:cn>2</m:cn>       <m:ci>x</m:ci>     </m:apply>     <m:cn>3</m:cn>   </m:apply>   <m:apply>     <m:times/>     <m:apply>       <m:minus/>       <m:ci>x</m:ci>       <m:cn>1</m:cn>     </m:apply>     <m:apply>       <m:plus/>       <m:ci>x</m:ci>       <m:cn>3</m:cn>     </m:apply>   </m:apply> </m:apply> </m:math></title>&lt;math&gt;
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;apply&gt;
+    &lt;plus/&gt;
+    &lt;apply&gt;
+      &lt;power/&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+      &lt;cn&gt;2&lt;/cn&gt;
+    &lt;/apply&gt;
+    &lt;apply&gt;
+      &lt;times/&gt;
+      &lt;cn&gt;2&lt;/cn&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/apply&gt;
+    &lt;cn&gt;3&lt;/cn&gt;
+  &lt;/apply&gt;
+  &lt;apply&gt;
+    &lt;times/&gt;
+    &lt;apply&gt;
+      &lt;minus/&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+      &lt;cn&gt;1&lt;/cn&gt;
+    &lt;/apply&gt;
+    &lt;apply&gt;
+      &lt;plus/&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+      &lt;cn&gt;3&lt;/cn&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/math&gt;</code><code id="eip-458" display="block"><title><m:math> <m:apply>   <m:eq/>   <m:ci>x</m:ci>   <m:apply>     <m:divide/>     <m:apply>       <m:minus/>       <m:ci>c</m:ci>       <m:ci>b</m:ci>     </m:apply>     <m:ci>a</m:ci>   </m:apply> </m:apply> </m:math></title>&lt;math&gt;
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;ci&gt;x&lt;/ci&gt;
+  &lt;apply&gt;
+    &lt;divide/&gt;
+    &lt;apply&gt;
+      &lt;minus/&gt;
+      &lt;ci&gt;c&lt;/ci&gt;
+      &lt;ci&gt;b&lt;/ci&gt;
+    &lt;/apply&gt;
+    &lt;ci&gt;a&lt;/ci&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/math&gt;</code><code id="eip-513" display="block"><title><m:math> <m:apply>   <m:eq/>   <m:apply>     <m:root/>     <m:degree>       <m:cn>3</m:cn>     </m:degree>     <m:ci>b</m:ci>   </m:apply>   <m:apply>     <m:log/>     <m:logbase>       <m:cn>2</m:cn>     </m:logbase>     <m:ci>a</m:ci>   </m:apply> </m:apply> </m:math></title>&lt;math&gt;
+&lt;apply&gt;
+  &lt;eq/&gt;
+  &lt;apply&gt;
+    &lt;root/&gt;
+    &lt;degree&gt;
+      &lt;cn&gt;3&lt;/cn&gt;
+    &lt;/degree&gt;
+    &lt;ci&gt;b&lt;/ci&gt;
+  &lt;/apply&gt;
+  &lt;apply&gt;
+    &lt;log/&gt;
+    &lt;logbase&gt;
+      &lt;cn&gt;2&lt;/cn&gt;
+    &lt;/logbase&gt;
+    &lt;ci&gt;a&lt;/ci&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/math&gt;</code></section>
+<section id="trig"><title>Trigonometry</title><code id="eip-442" display="block"><title><m:math display="display">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:power/>         <m:apply>           <m:sin/>           <m:ci>θ</m:ci>         </m:apply>         <m:cn>2</m:cn>       </m:apply>       <m:apply>         <m:power/>         <m:apply>           <m:cos/>           <m:ci>θ</m:ci>         </m:apply>         <m:cn>2</m:cn>       </m:apply>     </m:apply>     <m:cn>1</m:cn>   </m:apply> </m:math></title>&lt;math&gt;
+  &lt;apply&gt;
+    &lt;eq/&gt;
+    &lt;apply&gt;
+      &lt;plus/&gt;
+      &lt;apply&gt;
+        &lt;power/&gt;
+        &lt;apply&gt;
+          &lt;sin/&gt;
+          &lt;ci&gt;?&lt;/ci&gt;
+        &lt;/apply&gt;
+        &lt;cn&gt;2&lt;/cn&gt;
+      &lt;/apply&gt;
+      &lt;apply&gt;
+        &lt;power/&gt;
+        &lt;apply&gt;
+          &lt;cos/&gt;
+          &lt;ci&gt;?&lt;/ci&gt;
+        &lt;/apply&gt;
+        &lt;cn&gt;2&lt;/cn&gt;
+      &lt;/apply&gt;
+    &lt;/apply&gt;
+    &lt;cn&gt;1&lt;/cn&gt;
+  &lt;/apply&gt;
+&lt;/math&gt;</code></section>
+<section id="calc"><title>Calculus</title><code id="eip-158" display="block"><title><m:math display="display">   <m:apply>     <m:limit/>     <m:bvar>       <m:ci>h</m:ci>     </m:bvar>     <m:lowlimit>       <m:cn>0</m:cn>     </m:lowlimit>     <m:apply>       <m:divide/>       <m:apply>         <m:minus/>         <m:apply>           <m:ci>f</m:ci>           <m:apply>             <m:plus/>             <m:ci>x</m:ci>             <m:ci>h</m:ci>           </m:apply>         </m:apply>         <m:apply>           <m:ci>f</m:ci>           <m:ci>x</m:ci>         </m:apply>       </m:apply>       <m:ci>h</m:ci>     </m:apply>   </m:apply> </m:math></title>&lt;math&gt;
+  &lt;apply&gt;
+    &lt;limit/&gt;
+    &lt;bvar&gt;
+      &lt;ci&gt;h&lt;/ci&gt;
+    &lt;/bvar&gt;
+    &lt;lowlimit&gt;
+      &lt;cn&gt;0&lt;/cn&gt;
+    &lt;/lowlimit&gt;
+    &lt;apply&gt;
+      &lt;divide/&gt;
+      &lt;apply&gt;
+        &lt;minus/&gt;
+        &lt;apply&gt;
+          &lt;ci&gt;f&lt;/ci&gt;
+          &lt;apply&gt;
+            &lt;plus/&gt;
+            &lt;ci&gt;x&lt;/ci&gt;
+            &lt;ci&gt;h&lt;/ci&gt;
+          &lt;/apply&gt;
+        &lt;/apply&gt;
+        &lt;apply&gt;
+          &lt;ci&gt;f&lt;/ci&gt;
+          &lt;ci&gt;x&lt;/ci&gt;
+        &lt;/apply&gt;
+      &lt;/apply&gt;
+      &lt;ci&gt;h&lt;/ci&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+&lt;/math&gt;</code><code id="eip-325" display="block"><title><m:math display="display">   <m:apply>     <m:eq/>     <m:apply>       <m:ci>F</m:ci>       <m:ci>x</m:ci>     </m:apply>     <m:apply>       <m:int/>       <m:bvar>         <m:ci>t</m:ci>       </m:bvar>       <m:lowlimit>         <m:ci>a</m:ci>       </m:lowlimit>       <m:uplimit>         <m:ci>x</m:ci>       </m:uplimit>       <m:apply>         <m:ci>f</m:ci>         <m:ci>t</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math></title>&lt;math&gt;
+  &lt;apply&gt;
+    &lt;eq/&gt;
+    &lt;apply&gt;
+      &lt;ci&gt;F&lt;/ci&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/apply&gt;
+    &lt;apply&gt;
+      &lt;int/&gt;
+      &lt;bvar&gt;
+        &lt;ci&gt;t&lt;/ci&gt;
+      &lt;/bvar&gt;
+      &lt;lowlimit&gt;
+        &lt;ci&gt;a&lt;/ci&gt;
+      &lt;/lowlimit&gt;
+      &lt;uplimit&gt;
+        &lt;ci&gt;x&lt;/ci&gt;
+      &lt;/uplimit&gt;
+      &lt;apply&gt;
+        &lt;ci&gt;f&lt;/ci&gt;
+        &lt;ci&gt;t&lt;/ci&gt;
+      &lt;/apply&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+&lt;/math&gt;</code></section>
+
+
+
+<section id="diffeq"><title>Differential Equations</title><code id="eip-398" display="block"><title><m:math> <m:apply>   <m:diff/>   <m:bvar><m:ci> x </m:ci></m:bvar>   <m:apply><m:ci> f </m:ci>     <m:ci> y </m:ci>   </m:apply> </m:apply> </m:math></title>&lt;math&gt;
+&lt;apply&gt;
+  &lt;diff/&gt;
+  &lt;bvar&gt;&lt;ci&gt; x &lt;/ci&gt;&lt;/bvar&gt;
+  &lt;apply&gt;&lt;ci&gt; f &lt;/ci&gt;
+    &lt;ci&gt; y &lt;/ci&gt;
+  &lt;/apply&gt;
+&lt;/apply&gt;
+&lt;/math&gt;</code><code id="eip-160" display="block"><title><m:math>   <m:apply>     <m:partialdiff/>     <m:bvar>       <m:ci>x</m:ci>     </m:bvar>     <m:bvar>       <m:ci>y</m:ci>     </m:bvar>     <m:apply>       <m:ci type="function">f</m:ci>       <m:ci>x</m:ci>       <m:ci>y</m:ci>     </m:apply>   </m:apply> </m:math></title>&lt;math&gt;
+  &lt;apply&gt;
+    &lt;partialdiff/&gt;
+    &lt;bvar&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+    &lt;/bvar&gt;
+    &lt;bvar&gt;
+      &lt;ci&gt;y&lt;/ci&gt;
+    &lt;/bvar&gt;
+    &lt;apply&gt;
+      &lt;ci type="function"&gt;f&lt;/ci&gt;
+      &lt;ci&gt;x&lt;/ci&gt;
+      &lt;ci&gt;y&lt;/ci&gt;
+    &lt;/apply&gt;
+  &lt;/apply&gt;
+&lt;/math&gt;</code></section>
+
+</content>
+</document>
