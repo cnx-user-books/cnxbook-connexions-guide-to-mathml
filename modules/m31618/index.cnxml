@@ -83,7 +83,7 @@
   &lt;/apply&gt;
 &lt;/apply&gt;
 &lt;/math&gt;</code></section>
-<section id="trig"><title>Trigonometry</title><code id="eip-442" display="block"><title><m:math display="display">   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:power/>         <m:apply>           <m:sin/>           <m:ci>θ</m:ci>         </m:apply>         <m:cn>2</m:cn>       </m:apply>       <m:apply>         <m:power/>         <m:apply>           <m:cos/>           <m:ci>θ</m:ci>         </m:apply>         <m:cn>2</m:cn>       </m:apply>     </m:apply>     <m:cn>1</m:cn>   </m:apply> </m:math></title>&lt;math&gt;
+<section id="trig"><title>Trigonometry</title><code id="eip-442" display="block"><title><m:math>   <m:apply>     <m:eq/>     <m:apply>       <m:plus/>       <m:apply>         <m:power/>         <m:apply>           <m:sin/>           <m:ci>θ</m:ci>         </m:apply>         <m:cn>2</m:cn>       </m:apply>       <m:apply>         <m:power/>         <m:apply>           <m:cos/>           <m:ci>θ</m:ci>         </m:apply>         <m:cn>2</m:cn>       </m:apply>     </m:apply>     <m:cn>1</m:cn>   </m:apply> </m:math></title>&lt;math&gt;
   &lt;apply&gt;
     &lt;eq/&gt;
     &lt;apply&gt;
@@ -108,7 +108,7 @@
     &lt;cn&gt;1&lt;/cn&gt;
   &lt;/apply&gt;
 &lt;/math&gt;</code></section>
-<section id="calc"><title>Calculus</title><code id="eip-158" display="block"><title><m:math display="display">   <m:apply>     <m:limit/>     <m:bvar>       <m:ci>h</m:ci>     </m:bvar>     <m:lowlimit>       <m:cn>0</m:cn>     </m:lowlimit>     <m:apply>       <m:divide/>       <m:apply>         <m:minus/>         <m:apply>           <m:ci>f</m:ci>           <m:apply>             <m:plus/>             <m:ci>x</m:ci>             <m:ci>h</m:ci>           </m:apply>         </m:apply>         <m:apply>           <m:ci>f</m:ci>           <m:ci>x</m:ci>         </m:apply>       </m:apply>       <m:ci>h</m:ci>     </m:apply>   </m:apply> </m:math></title>&lt;math&gt;
+<section id="calc"><title>Calculus</title><code id="eip-158" display="block"><title><m:math>   <m:apply>     <m:limit/>     <m:bvar>       <m:ci>h</m:ci>     </m:bvar>     <m:lowlimit>       <m:cn>0</m:cn>     </m:lowlimit>     <m:apply>       <m:divide/>       <m:apply>         <m:minus/>         <m:apply>           <m:ci>f</m:ci>           <m:apply>             <m:plus/>             <m:ci>x</m:ci>             <m:ci>h</m:ci>           </m:apply>         </m:apply>         <m:apply>           <m:ci>f</m:ci>           <m:ci>x</m:ci>         </m:apply>       </m:apply>       <m:ci>h</m:ci>     </m:apply>   </m:apply> </m:math></title>&lt;math&gt;
   &lt;apply&gt;
     &lt;limit/&gt;
     &lt;bvar&gt;
@@ -137,7 +137,7 @@
       &lt;ci&gt;h&lt;/ci&gt;
     &lt;/apply&gt;
   &lt;/apply&gt;
-&lt;/math&gt;</code><code id="eip-325" display="block"><title><m:math display="display">   <m:apply>     <m:eq/>     <m:apply>       <m:ci>F</m:ci>       <m:ci>x</m:ci>     </m:apply>     <m:apply>       <m:int/>       <m:bvar>         <m:ci>t</m:ci>       </m:bvar>       <m:lowlimit>         <m:ci>a</m:ci>       </m:lowlimit>       <m:uplimit>         <m:ci>x</m:ci>       </m:uplimit>       <m:apply>         <m:ci>f</m:ci>         <m:ci>t</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math></title>&lt;math&gt;
+&lt;/math&gt;</code><code id="eip-325" display="block"><title><m:math>   <m:apply>     <m:eq/>     <m:apply>       <m:ci>F</m:ci>       <m:ci>x</m:ci>     </m:apply>     <m:apply>       <m:int/>       <m:bvar>         <m:ci>t</m:ci>       </m:bvar>       <m:lowlimit>         <m:ci>a</m:ci>       </m:lowlimit>       <m:uplimit>         <m:ci>x</m:ci>       </m:uplimit>       <m:apply>         <m:ci>f</m:ci>         <m:ci>t</m:ci>       </m:apply>     </m:apply>   </m:apply> </m:math></title>&lt;math&gt;
   &lt;apply&gt;
     &lt;eq/&gt;
     &lt;apply&gt;

@@ -39,7 +39,7 @@
           <item><code>ci</code></item>
           <item><code>csymbol</code></item>
         </list>
-      </para><section id="eip-357"><title><code>cn</code></title><para id="eip-618">The <term>cn</term> element is used to denote an explicit number, as opposed to a variable or symbolic representation of a number. Values such as  <m:math display="display"><m:cn>1</m:cn></m:math>, <m:math display="display"><m:apply><m:minus/><m:cn>5000</m:cn></m:apply></m:math>, and <m:math display="display"><m:cn>3.14159</m:cn></m:math> are all marked up with <code>cn</code> tags.</para><para id="eip-526">In our simple example, <m:math>
+      </para><section id="eip-357"><title><code>cn</code></title><para id="eip-618">The <term>cn</term> element is used to denote an explicit number, as opposed to a variable or symbolic representation of a number. Values such as  <m:math><m:cn>1</m:cn></m:math>, <m:math><m:apply><m:minus/><m:cn>5000</m:cn></m:apply></m:math>, and <m:math><m:cn>3.14159</m:cn></m:math> are all marked up with <code>cn</code> tags.</para><para id="eip-526">In our simple example, <m:math>
         <m:apply>
           <m:eq/>
           <m:apply>
@@ -59,7 +59,7 @@
     &lt;/m:apply&gt;
   <emphasis>&lt;m:cn&gt;4&lt;/m:cn&gt;</emphasis>
   &lt;/m:apply&gt;
-&lt;/m:math&gt;</code></section><section id="eip-616"><title><code>ci</code></title><para id="eip-55">The <term>ci</term> element is used to markup variables. Any non-explicit representation of a number, such as <m:math display="display"><m:ci>X</m:ci></m:math>, <m:math display="display"><m:ci>F</m:ci></m:math>, or <m:math display="display"><m:ci><m:msub><m:mi>P</m:mi><m:mi>2</m:mi></m:msub></m:ci></m:math>, is contained in a <code>ci</code> element.</para><para id="eip-914">If we wished to change our example expression into an algebraic relation, say <m:math>
+&lt;/m:math&gt;</code></section><section id="eip-616"><title><code>ci</code></title><para id="eip-55">The <term>ci</term> element is used to markup variables. Any non-explicit representation of a number, such as <m:math><m:ci>X</m:ci></m:math>, <m:math><m:ci>F</m:ci></m:math>, or <m:math><m:ci><m:msub><m:mi>P</m:mi><m:mi>2</m:mi></m:msub></m:ci></m:math>, is contained in a <code>ci</code> element.</para><para id="eip-914">If we wished to change our example expression into an algebraic relation, say <m:math>
         <m:apply>
           <m:eq/>
           <m:apply>
@@ -100,7 +100,7 @@
   </m:apply>
 </m:math></para><para id="eip-335">It can be difficult to understand the way that <code>apply</code> tags work since MathML doesn't "read" like a typical mathematical expression. Again, remember that Content MathML is focused on applying operations in order to convey semantics. If we were to simply transcribe our Content MathML example onto paper as operations and numbers, it would look something like this:</para>
 <para id="polishexample">
-<m:math display="display">
+<m:math>
   <m:mrow>
     <m:mo>=</m:mo>
     <m:mo stretchy="false">(</m:mo>
@@ -139,54 +139,54 @@
     &lt;/m:apply&gt;
   &lt;m:cn&gt;4&lt;/m:cn&gt;
   &lt;/m:apply&gt;
-&lt;/m:math&gt;</code><para id="eip-556">Notice that the <code>&lt;eq/&gt;</code> element does not have an end tag. This is because relations and operations are generally declared using an <term>empty tag</term>. It doesn't "contain" anything, so it simply terminates itself with a forward slash at the end of the element.</para><para id="eip-437">There are several commonly-used Content MathML relation elements. These include:</para><list id="eip-934"><item><code>eq</code> (<m:math display="display">
+&lt;/m:math&gt;</code><para id="eip-556">Notice that the <code>&lt;eq/&gt;</code> element does not have an end tag. This is because relations and operations are generally declared using an <term>empty tag</term>. It doesn't "contain" anything, so it simply terminates itself with a forward slash at the end of the element.</para><para id="eip-437">There are several commonly-used Content MathML relation elements. These include:</para><list id="eip-934"><item><code>eq</code> (<m:math>
   <m:apply>
     <m:eq/>
     <m:cn>a</m:cn>
     <m:cn>b</m:cn>
   </m:apply>
 </m:math>)</item>
-<item><code>neq</code> (<m:math display="display">
+<item><code>neq</code> (<m:math>
   <m:apply>
     <m:neq/>
     <m:cn>a</m:cn>
     <m:cn>b</m:cn>
   </m:apply>
 </m:math>)</item>
-<item><code>gt</code> (<m:math display="display">
+<item><code>gt</code> (<m:math>
   <m:apply>
     <m:gt/>
     <m:cn>a</m:cn>
     <m:cn>b</m:cn>
   </m:apply>
 </m:math>)</item>
-<item><code>lt</code> (<m:math display="display">
+<item><code>lt</code> (<m:math>
   <m:apply>
     <m:lt/>
     <m:cn>a</m:cn>
     <m:cn>b</m:cn>
   </m:apply>
 </m:math>)</item>
-<item><code>geq</code> (<m:math display="display">
+<item><code>geq</code> (<m:math>
   <m:apply>
     <m:geq/>
     <m:cn>a</m:cn>
     <m:cn>b</m:cn>
   </m:apply>
 </m:math>)</item>
-<item><code>leq</code> (<m:math display="display">
+<item><code>leq</code> (<m:math>
   <m:apply>
     <m:leq/>
     <m:cn>a</m:cn>
     <m:cn>b</m:cn>
   </m:apply>
 </m:math>)</item>
-</list><para id="eip-975">Similarly, we usually have at least one <term>operator</term> in a given mathematical expression. Some of the most common operators used in Content MathML include:</para><list id="eip-882"><item><code>plus</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:plus/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
-<item><code>minus</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:minus/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
-<item><code>divide</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:divide/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
-<item><code>times</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:times/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
-<item><code>power</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:power/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
-<item><code>root</code> (<m:math display="display"> <m:apply> <m:eq/> <m:apply> <m:root/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+</list><para id="eip-975">Similarly, we usually have at least one <term>operator</term> in a given mathematical expression. Some of the most common operators used in Content MathML include:</para><list id="eip-882"><item><code>plus</code> (<m:math> <m:apply> <m:eq/> <m:apply> <m:plus/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>minus</code> (<m:math> <m:apply> <m:eq/> <m:apply> <m:minus/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>divide</code> (<m:math> <m:apply> <m:eq/> <m:apply> <m:divide/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>times</code> (<m:math> <m:apply> <m:eq/> <m:apply> <m:times/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>power</code> (<m:math> <m:apply> <m:eq/> <m:apply> <m:power/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
+<item><code>root</code> (<m:math> <m:apply> <m:eq/> <m:apply> <m:root/> <m:ci>a</m:ci> <m:ci>b</m:ci> </m:apply> <m:cn>c</m:cn> </m:apply></m:math>)</item>
 </list>
     </section>
 	
